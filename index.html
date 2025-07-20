@@ -1,18 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ikshana Visuals - Coming Soon</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-        
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        
+
         body {
             font-family: 'Poppins', sans-serif;
             overflow-x: hidden;
@@ -20,7 +21,7 @@
             min-height: 100vh;
             position: relative;
         }
-        
+
         .background-animation {
             position: fixed;
             top: 0;
@@ -28,22 +29,30 @@
             width: 100%;
             height: 100%;
             z-index: -1;
-            background: linear-gradient(135deg, 
-                #f093fb 0%, 
-                #f5576c 25%, 
-                #4facfe 50%, 
-                #00f2fe 75%, 
-                #43e97b 100%);
+            background: linear-gradient(135deg,
+                    #f093fb 0%,
+                    #f5576c 25%,
+                    #4facfe 50%,
+                    #00f2fe 75%,
+                    #43e97b 100%);
             background-size: 400% 400%;
             animation: gradientShift 15s ease infinite;
         }
-        
+
         @keyframes gradientShift {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
         }
-        
+
         .floating-shapes {
             position: fixed;
             top: 0;
@@ -53,14 +62,14 @@
             z-index: -1;
             pointer-events: none;
         }
-        
+
         .shape {
             position: absolute;
             background: rgba(255, 255, 255, 0.1);
             border-radius: 50%;
             animation: float 20s infinite ease-in-out;
         }
-        
+
         .shape:nth-child(1) {
             width: 80px;
             height: 80px;
@@ -69,7 +78,7 @@
             animation-delay: 0s;
             background: rgba(255, 182, 193, 0.3);
         }
-        
+
         .shape:nth-child(2) {
             width: 60px;
             height: 60px;
@@ -78,7 +87,7 @@
             animation-delay: -5s;
             background: rgba(173, 216, 230, 0.3);
         }
-        
+
         .shape:nth-child(3) {
             width: 100px;
             height: 100px;
@@ -87,7 +96,7 @@
             animation-delay: -10s;
             background: rgba(221, 160, 221, 0.3);
         }
-        
+
         .shape:nth-child(4) {
             width: 40px;
             height: 40px;
@@ -96,13 +105,23 @@
             animation-delay: -15s;
             background: rgba(255, 228, 196, 0.3);
         }
-        
+
         @keyframes float {
-            0%, 100% { transform: translateY(0px) rotate(0deg); }
-            33% { transform: translateY(-30px) rotate(120deg); }
-            66% { transform: translateY(30px) rotate(240deg); }
+
+            0%,
+            100% {
+                transform: translateY(0px) rotate(0deg);
+            }
+
+            33% {
+                transform: translateY(-30px) rotate(120deg);
+            }
+
+            66% {
+                transform: translateY(30px) rotate(240deg);
+            }
         }
-        
+
         .container {
             min-height: 100vh;
             display: flex;
@@ -111,7 +130,7 @@
             padding: 20px;
             backdrop-filter: blur(10px);
         }
-        
+
         .content {
             text-align: center;
             background: rgba(255, 255, 255, 0.15);
@@ -124,18 +143,19 @@
             box-shadow: 0 25px 50px rgba(0, 0, 0, 0.1);
             animation: slideUp 1s ease-out;
         }
-        
+
         @keyframes slideUp {
             from {
                 opacity: 0;
                 transform: translateY(50px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
             }
         }
-        
+
         .logo {
             font-size: 3.5rem;
             font-weight: 700;
@@ -144,16 +164,17 @@
             text-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
             animation: glow 2s ease-in-out infinite alternate;
         }
-        
+
         @keyframes glow {
             from {
                 text-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
             }
+
             to {
                 text-shadow: 0 4px 25px rgba(255, 255, 255, 0.4);
             }
         }
-        
+
         .subtitle {
             font-size: 1.2rem;
             color: rgba(255, 255, 255, 0.9);
@@ -161,7 +182,7 @@
             font-weight: 300;
             letter-spacing: 2px;
         }
-        
+
         .coming-soon {
             font-size: 2.5rem;
             color: #fff;
@@ -169,13 +190,24 @@
             font-weight: 600;
             animation: pulse 2s infinite;
         }
-        
+
         @keyframes pulse {
-            0% { opacity: 1; transform: scale(1); }
-            50% { opacity: 0.8; transform: scale(1.05); }
-            100% { opacity: 1; transform: scale(1); }
+            0% {
+                opacity: 1;
+                transform: scale(1);
+            }
+
+            50% {
+                opacity: 0.8;
+                transform: scale(1.05);
+            }
+
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
         }
-        
+
         .message {
             font-size: 1.1rem;
             color: rgba(255, 255, 255, 0.85);
@@ -183,7 +215,7 @@
             line-height: 1.6;
             font-weight: 300;
         }
-        
+
         .email-form {
             display: flex;
             gap: 10px;
@@ -191,7 +223,7 @@
             flex-wrap: wrap;
             justify-content: center;
         }
-        
+
         .email-input {
             flex: 1;
             min-width: 200px;
@@ -206,16 +238,16 @@
             backdrop-filter: blur(10px);
             transition: all 0.3s ease;
         }
-        
+
         .email-input::placeholder {
             color: rgba(255, 255, 255, 0.7);
         }
-        
+
         .email-input:focus {
             background: rgba(255, 255, 255, 0.3);
             transform: scale(1.02);
         }
-        
+
         .notify-btn {
             padding: 15px 30px;
             background: linear-gradient(45deg, #ff9a9e, #fecfef);
@@ -228,20 +260,20 @@
             font-size: 1rem;
             box-shadow: 0 10px 25px rgba(255, 154, 158, 0.3);
         }
-        
+
         .notify-btn:hover {
             transform: translateY(-3px);
             box-shadow: 0 15px 35px rgba(255, 154, 158, 0.4);
             background: linear-gradient(45deg, #fecfef, #ff9a9e);
         }
-        
+
         .social-links {
             display: flex;
             justify-content: center;
             gap: 20px;
             margin-top: 30px;
         }
-        
+
         .social-link {
             width: 50px;
             height: 50px;
@@ -255,13 +287,34 @@
             transition: all 0.3s ease;
             backdrop-filter: blur(10px);
         }
-        
+
         .social-link:hover {
             transform: translateY(-5px) scale(1.1);
             background: rgba(255, 255, 255, 0.3);
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
         }
-        
+
+        .social-link1 {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 18px;
+            border-radius: 50px;
+            background-color: rgba(255, 255, 255, 0.2);
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+
+        .social-link1:hover {
+            background-color: #1DA851;
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+        }
+
+
         .progress-bar {
             width: 100%;
             height: 6px;
@@ -270,7 +323,7 @@
             margin-top: 30px;
             overflow: hidden;
         }
-        
+
         .progress-fill {
             height: 100%;
             background: linear-gradient(45deg, #ff9a9e, #fecfef, #fad0c4);
@@ -278,12 +331,19 @@
             width: 25%;
             animation: progressGlow 3s ease-in-out infinite;
         }
-        
+
         @keyframes progressGlow {
-            0%, 100% { box-shadow: 0 0 10px rgba(255, 154, 158, 0.5); }
-            50% { box-shadow: 0 0 20px rgba(255, 154, 158, 0.8); }
+
+            0%,
+            100% {
+                box-shadow: 0 0 10px rgba(255, 154, 158, 0.5);
+            }
+
+            50% {
+                box-shadow: 0 0 20px rgba(255, 154, 158, 0.8);
+            }
         }
-        
+
         .progress-text {
             text-align: center;
             margin-top: 10px;
@@ -291,74 +351,74 @@
             font-size: 0.9rem;
             font-weight: 300;
         }
-        
+
         /* Responsive Design */
         @media (max-width: 768px) {
             .content {
                 padding: 40px 30px;
                 margin: 10px;
             }
-            
+
             .logo {
                 font-size: 2.5rem;
             }
-            
+
             .coming-soon {
                 font-size: 2rem;
             }
-            
+
             .subtitle {
                 font-size: 1rem;
                 letter-spacing: 1px;
             }
-            
+
             .message {
                 font-size: 1rem;
             }
-            
+
             .email-form {
                 flex-direction: column;
                 align-items: center;
             }
-            
+
             .email-input {
                 width: 100%;
                 min-width: unset;
                 margin-bottom: 15px;
             }
-            
+
             .notify-btn {
                 width: 100%;
             }
-            
+
             .shape {
                 opacity: 0.5;
             }
         }
-        
+
         @media (max-width: 480px) {
             .content {
                 padding: 30px 20px;
             }
-            
+
             .logo {
                 font-size: 2rem;
             }
-            
+
             .coming-soon {
                 font-size: 1.5rem;
             }
-            
+
             .social-links {
                 gap: 15px;
             }
-            
+
             .social-link {
                 width: 45px;
                 height: 45px;
             }
         }
-        
+
         .sparkle {
             position: absolute;
             width: 4px;
@@ -367,16 +427,18 @@
             border-radius: 50%;
             animation: sparkle 3s linear infinite;
         }
-        
+
         @keyframes sparkle {
             0% {
                 opacity: 0;
                 transform: scale(0);
             }
+
             50% {
                 opacity: 1;
                 transform: scale(1);
             }
+
             100% {
                 opacity: 0;
                 transform: scale(0);
@@ -384,90 +446,92 @@
         }
     </style>
 </head>
+
 <body>
     <div class="background-animation"></div>
-    
+
     <div class="floating-shapes">
         <div class="shape"></div>
         <div class="shape"></div>
         <div class="shape"></div>
         <div class="shape"></div>
     </div>
-    
+
     <div class="container">
         <div class="content">
             <h1 class="logo">Ikshana Visuals</h1>
             <p class="subtitle">VISUAL STORYTELLING</p>
             <h2 class="coming-soon">Coming Soon</h2>
             <p class="message">
-                We're crafting something extraordinary. A new vision in visual storytelling is about to unfold. 
+                We're crafting something extraordinary. A new vision in visual storytelling is about to unfold.
                 Stay tuned for an immersive experience that will transform how you see the world.
             </p>
 
             <!-- Booking Contact -->
-<div class="booking-info" style="margin-bottom: 30px;">
-    <p class="message" style="font-size: 1.2rem; font-weight: 400;">
-        📞 For bookings, WhatsApp us at <br>
-        <a href="https://wa.me/919664626735" target="_blank" style="color: #fff; font-weight: 600; text-decoration: underline;">+91 96646 26735</a>
-    </p>
-</div>
+            <div class="booking-info" style="margin-bottom: 30px;">
+                <a href="https://wa.me/919664626735" target="_blank" class="social-link1" title="WhatsApp">
+                    <img src="whitewhatsapp.png" alt="WhatsApp" width="34" height="34">
+                    <span style="margin-left: 8px; color: #fff; font-weight: 500;">Book on WhatsApp</span>
+                </a>
+            </div>
 
-            
+
             <!-- <form class="email-form" onsubmit="handleSubmit(event)">
                 <input type="email" class="email-input" placeholder="Enter your email for updates" required>
                 <button type="submit" class="notify-btn">Notify Me</button>
             </form> -->
-            
+
             <div class="progress-bar">
                 <div class="progress-fill"></div>
             </div>
             <p class="progress-text">25% Complete</p>
-            
-            <div class="social-links">
-                <a href="https://www.instagram.com/ikshanavisuals/" target="_blank" class="social-link" title="Instagram">
-    <img src="instagram.png" alt="Instagram" width="24" height="24">
-</a>
 
-<a href="https://www.behance.net/ikshanavisuals" target="_blank" class="social-link" title="Behance">
-    <img src="behancelogo.png" alt="Behance" width="24" height="24">
-</a>
+            <div class="social-links">
+                <a href="https://www.instagram.com/ikshanavisuals/" target="_blank" class="social-link"
+                    title="Instagram">
+                    <img src="instagramwhite1.png" alt="Instagram" width="24" height="24">
+                </a>
+
+                <a href="https://www.behance.net/ikshanavisuals" target="_blank" class="social-link" title="Behance">
+                    <img src="whitebehance1.png" alt="Behance" width="24" height="24">
+                </a>
 
             </div>
         </div>
     </div>
-    
+
     <script>
         function handleSubmit(event) {
             event.preventDefault();
             const email = event.target.querySelector('.email-input').value;
-            
+
             // Send email to chirag@ikshanavisuals.in (in a real implementation, this would be handled server-side)
             const subject = encodeURIComponent('New Email Subscription - Ikshana Visuals');
             const body = encodeURIComponent(`New email subscription request from: ${email}`);
             const mailtoLink = `mailto:chirag@ikshanavisuals.in?subject=${subject}&body=${body}`;
-            
+
             // Create success animation
             const button = event.target.querySelector('.notify-btn');
             const originalText = button.textContent;
             button.textContent = 'Thank You! ✨';
             button.style.background = 'linear-gradient(45deg, #43e97b, #38f9d7)';
-            
+
             // Reset form
             event.target.querySelector('.email-input').value = '';
-            
+
             // Reset button after 3 seconds
             setTimeout(() => {
                 button.textContent = originalText;
                 button.style.background = 'linear-gradient(45deg, #ff9a9e, #fecfef)';
             }, 3000);
-            
+
             // Create sparkle effect
             createSparkles();
-            
+
             // Open email client (optional - you might want to integrate with a proper email service)
             // window.open(mailtoLink);
         }
-        
+
         function createSparkles() {
             for (let i = 0; i < 10; i++) {
                 setTimeout(() => {
@@ -476,17 +540,17 @@
                     sparkle.style.left = Math.random() * 100 + '%';
                     sparkle.style.top = Math.random() * 100 + '%';
                     document.body.appendChild(sparkle);
-                    
+
                     setTimeout(() => {
                         sparkle.remove();
                     }, 3000);
                 }, i * 100);
             }
         }
-        
+
         // Add random sparkles periodically
         setInterval(createSparkles, 8000);
-        
+
         // Smooth scroll for any future navigation
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
@@ -496,13 +560,13 @@
                 });
             });
         });
-        
+
         // Add mouse move parallax effect
         document.addEventListener('mousemove', (e) => {
             const shapes = document.querySelectorAll('.shape');
             const mouseX = e.clientX / window.innerWidth;
             const mouseY = e.clientY / window.innerHeight;
-            
+
             shapes.forEach((shape, index) => {
                 const speed = (index + 1) * 0.5;
                 const x = (mouseX - 0.5) * speed * 20;
@@ -510,6 +574,20 @@
                 shape.style.transform = `translate(${x}px, ${y}px)`;
             });
         });
+
+        // Blinking Between Two Phrases Animation of Title
+        const titles = ["Ikshana Visuals - Coming Soon", "🚀 Launching Soon!"];
+        let toggle = 0;
+
+        setInterval(() => {
+            document.title = titles[toggle];
+            toggle = (toggle + 1) % titles.length;
+        }, 1000);
     </script>
+
+
+
+
 </body>
+
 </html>
